@@ -7,9 +7,7 @@ int main()
 	cin >> a;
 	cout << "num2: ";
 	cin >> b;
-	int* ptr1;
-	int* ptr2;
-	int* ptr3;
+	int* ptr1, * ptr2, * ptr3;
 	ptr1 = &a;
 	ptr2 = &b;
 	ptr3 = ptr1;
