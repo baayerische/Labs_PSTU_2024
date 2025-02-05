@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <cstdlib>
 using namespace std;
+
 int main()
 {
 	int r, range_min, range_max,tmp;
@@ -32,6 +33,7 @@ int main()
 		arr[min_index] = arr[i];
 		arr[i] = tmp;
 	}
+	
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << " ";
