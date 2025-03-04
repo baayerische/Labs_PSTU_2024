@@ -46,7 +46,6 @@ int main()
         }
     }
 
-    //âûâîä íîâîãî ìàññèâà
     for (int i = 0; i < newSize; i++)
     {
         cout << newArray[i] << " ";
