@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-    //рандомный массив из 10 элементов и вывод
     int r, range_min, range_max, min = 100;
     int a[10];
     float sA = 0;
@@ -19,23 +18,21 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         a[i] = rand() % (range_max - range_min + 1) + range_min; 
-        cout << a[i] << " ";//вывод
+        cout << a[i] << " ";
 
         sA += a[i];
 
         if (a[i] < min)
         {
-            min = a[i];//поиск минимального числа
+            min = a[i];
         }
     }
-    sA /= 10;//среднее арифметическое
+    sA /= 10;
     cout << endl;
 
-    //удаление минимальных элементов и добавление 3х средних арифметических
     int newSize = 0;
-    float newArray[13];//новый массив, который будет содержать 3 новых элемента 
+    float newArray[13];
 
-    //добавляем три элемента, равных среднему арифметическому, в начало 
     newArray[newSize++] = sA;
     newArray[newSize++] = sA;
     newArray[newSize++] = sA;
@@ -44,12 +41,12 @@ int main()
     {
         if (a[i] != min)
         {
-            newArray[newSize] = a[i];//добавляем в массив все элементы, кроме равных минимальному
+            newArray[newSize] = a[i];
             newSize++;
         }
     }
 
-    //вывод нового массива
+    //ГўГ»ГўГ®Г¤ Г­Г®ГўГ®ГЈГ® Г¬Г Г±Г±ГЁГўГ 
     for (int i = 0; i < newSize; i++)
     {
         cout << newArray[i] << " ";
