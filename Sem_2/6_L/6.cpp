@@ -1,21 +1,9 @@
+```cpp
 #include <iostream>
 #include <fstream>
 #include <string>
 
 using namespace std;
-
-bool dig(const string& line) {
-    for (char ch : line) {
-        if (ch >= '0' && ch <= '9') {
-            return 1;
-        }
-    }
-    return 0;
-}
-
-bool startsWithA(const string& line) {
-    return !line.empty() && (line[0] == 'A' || line[0] == 'a');
-}
 
 int main() {
     ifstream myfile("F1.txt");
@@ -23,7 +11,14 @@ int main() {
     string line;
 
     while (getline(myfile, line)) {
-        if (!dig(line)) {
+        bool hasDigit = false;
+        for (char ch : line) {
+            if (ch >= '0' && ch <= '9') {
+                hasDigit = true;
+                break;
+            }
+        }
+        if (!hasDigit) {
             myfile2 << line << endl;
         }
     }
@@ -32,10 +27,10 @@ int main() {
     myfile2.close();
 
     ifstream myfile2_read("F2.txt");
-
     int count = 0;
+
     while (getline(myfile2_read, line)) {
-        if (startsWithA(line)) {
+        if (!line.empty() && (line[0] == 'A' || line[0] == 'a')) {
             count++;
         }
     }
@@ -46,3 +41,4 @@ int main() {
 
     return 0;
 }
+```
