@@ -1,7 +1,6 @@
-﻿#include <iostream>
+?#include <iostream>
 #include <cstdlib>
 using namespace std;
-
 int main()
 {
 	int r, range_min, range_max, key;
@@ -9,7 +8,6 @@ int main()
 	range_min = 2;
 	range_max = 280000;
 	int n = 10;
-	
 	for (int i = 0; i < 10; i++)
 	{
 		arr[i] = ((double)rand() / RAND_MAX) * (range_max -
@@ -17,7 +15,6 @@ int main()
 		cout << arr[i] << " ";
 	}
 	cout << endl;
-	
 	for (int i = 0; i < n; i++)
 	{
 		key = arr[i];
@@ -32,7 +29,6 @@ int main()
 		}
 		arr[j + 1] = key;
 	}
-	
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << " ";
