@@ -30,7 +30,7 @@ void insert(int value, int key)
         index = (index + 1) % tsize;
         if (index == sindex)
         {
-            cout << "Table overflow" << endl;
+            cout << "таблица переполнена" << endl;
             return;
         }
     }
