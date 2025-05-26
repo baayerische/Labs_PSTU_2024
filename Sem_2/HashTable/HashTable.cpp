@@ -88,11 +88,12 @@ void printTable()
 
 int main()
 {
+    setlocale(LC_ALL, "RU");
     init();
     int n, key, value, val, del;
-    cout << "How many numbers, but not > 10" << endl;
+    cout << "Сколько чисел (!>10)" << endl;
     cin >> n;
-    cout << "Enter value then key" << endl;
+    cout << "Введите значение, затем ключ" << endl;
     for(int i = 0; i < n; i++)
     {
         cin >> key;
@@ -100,17 +101,17 @@ int main()
         insert(key, value);
     }
     printTable();
-    cout << "Enter key to find value" << endl;
+    cout << "Введите ключ, чтобы найти значение" << endl;
     cin >> key;
     if (search(key, val))
     {
-        cout << "Found key: " << key << " with value: " << val << endl;
+        cout << "найденныйй ключ: " << key << " со значением: " << val << endl;
     }
     else
     {
-        cout << "Key not found" << endl;
+        cout << "ключ не найден" << endl;
     }
-    cout << "Enter key to delete" << endl;
+    cout << "введите ключ для удаления" << endl;
     cin >> del;
     remove(del);
     printTable();
